@@ -1,10 +1,10 @@
 ## VR Texture- Ring Solar Eclipse
 ![Tampilan Awal](assets/ring-solar-eclipse.jpg)
 
-Repo ini digunakan untuk belajar tentang Texture pada VR menggunakan AFrame.io
+Repo ini digunakan untuk belajar tentang Texture pada VR menggunakan AFrame.io yang menampilkan
+sebuah contoh fenomena alam yaitu gerhana matahari cincin.
 
-## Tentang Aplikasi
-Aplikasi VR ini menampilkan contoh fenomena alam yaitu gerhana matahari cincin.
+## Preview Aplikasi
 ![Tampilan Preview](assets/preview.png)
 
 Demo VR bisa diakses melalui link berikut:
