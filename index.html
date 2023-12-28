@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Ring Solar Eclipse - By Aziz Arif Rizaldi</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="earth_texture" src="assets/earth.jpg">
+            <img id="moon_texture" src="assets/moon.jpg">
+            <img id="sun_texture" src="assets/sun.jpg">
+            <img id="galaxy_texture" src="assets/light-sky.jpg">
+            <audio id="space_audio" src="assets/space-audio.mp3"></audio>
+        </a-assets>
+        
+        <a-entity
+            radius="3"
+            position="0 4 0"
+            geometry="primitive: plane; height: 0; width: 0"
+            material="color: black"
+            text="width: 12; value: Ring Solar Eclipse - By Aziz Arif Rizaldi"></a-entity>
+        
+        <!-- <a-entity line="start: -4.3 3 -3; end: 3.9 1.7 -5; color: white" material="shader: line; dashPattern: 150 200"></a-entity> -->
+        <!-- <a-entity line__2="start: -4.3 -0.95 -3; end: 3.9 0.8 -5; color: white" material__2="shader: line; dashPattern: 5 2"></a-entity> -->
+            
+        <a-sphere position="-7 1.25 -5" radius="3" segments-height="84" src="#sun_texture"
+            animation="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true">
+        </a-sphere>
+
+        <a-sphere position="4 1.25 -5" radius="0.5" segments-height="84" src="#moon_texture"
+            animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true">
+        </a-sphere>
+        <a-sphere position="8 1.25 -5" radius="1.5" segments-height="84" src="#earth_texture"
+            animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true">
+        </a-sphere>
+        <a-camera position='0 0 7'></a-camera>
+        <a-sound src="#space_audio" autoplay="true"></a-sound>
+        <a-sky src="#galaxy_texture"></a-sky>
+    </a-scene>
+</body>
+
+</html>
